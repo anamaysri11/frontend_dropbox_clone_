@@ -6,17 +6,16 @@ import { useDispatch } from 'react-redux';
 import { deleteFile } from '../actions/fileActions';
 import { Menu, Transition } from '@headlessui/react';
 import {
-  ArrowDownTrayIcon,    // Updated Download Icon
+  ArrowDownTrayIcon,    
   TrashIcon,
-  EllipsisVerticalIcon // Updated Dots Icon
-} from '@heroicons/react/24/outline'; // Updated import path for Heroicons v2
+  EllipsisVerticalIcon 
+} from '@heroicons/react/24/outline'; 
 import ReactTooltip from 'react-tooltip';
 
 const FileItem = ({ file }) => {
   const dispatch = useDispatch();
   const [deleting, setDeleting] = useState(false);
 
-  // Function to handle file deletion
   const handleDelete = async () => {
     const confirmDelete = window.confirm(`Are you sure you want to delete "${file.filename}"?`);
     if (confirmDelete) {
@@ -26,11 +25,8 @@ const FileItem = ({ file }) => {
     }
   };
 
-  // Helper function to get the appropriate icon based on file type
   const getFileIcon = (contentType) => {
     const type = contentType.split('/')[1];
-    // Ensure you have corresponding SVG icons in public/icons/
-    // For example, 'png.svg', 'jpeg.svg', 'pdf.svg', 'txt.svg', 'json.svg'
     return `/icons/${type}.svg`;
   };
 

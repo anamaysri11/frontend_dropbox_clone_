@@ -7,7 +7,7 @@ import {
   PhotoIcon,
   ShareIcon,
   DocumentTextIcon
-} from '@heroicons/react/24/outline'; // Updated import paths for Heroicons v2
+} from '@heroicons/react/24/outline';
 
 const Sidebar = () => {
   const navLinks = [
@@ -15,7 +15,7 @@ const Sidebar = () => {
     { name: 'Photos', path: '/photos', icon: PhotoIcon },
     { name: 'Shared', path: '/shared', icon: ShareIcon },
     { name: 'Documents', path: '/documents', icon: DocumentTextIcon },
-    // Add more links as needed
+    
   ];
 
   return (

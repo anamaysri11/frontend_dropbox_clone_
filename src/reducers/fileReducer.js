@@ -1,44 +1,4 @@
-// // src/reducers/fileReducer.js
 
-// const initialState = {
-//     files: [],
-//     loading: false,
-//     error: null,
-//   };
-  
-//   export default function fileReducer(state = initialState, action) {
-//     switch (action.type) {
-//       case 'FETCH_FILES_REQUEST':
-//       case 'UPLOAD_FILE_REQUEST':
-//         return {
-//           ...state,
-//           loading: true,
-//         };
-//       case 'FETCH_FILES_SUCCESS':
-//         return {
-//           ...state,
-//           loading: false,
-//           files: action.payload,
-//         };
-//       case 'UPLOAD_FILE_SUCCESS':
-//         return {
-//           ...state,
-//           loading: false,
-//           files: [action.payload, ...state.files],
-//         };
-//       case 'FETCH_FILES_FAILURE':
-//       case 'UPLOAD_FILE_FAILURE':
-//         return {
-//           ...state,
-//           loading: false,
-//           error: action.payload,
-//         };
-//       default:
-//         return state;
-//     }
-//   }
-  
-// src/reducers/fileReducer.js
 
 import {
     FETCH_FILES_REQUEST,

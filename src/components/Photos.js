@@ -14,7 +14,6 @@ const Photos = () => {
     dispatch(fetchFiles());
   }, [dispatch]);
 
-  // Filter files with image content types
   const photoFiles = files.filter(file => file.content_type.startsWith('image/'));
 
   if (loading) {

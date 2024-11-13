@@ -14,8 +14,6 @@ const Shared = () => {
     dispatch(fetchFiles());
   }, [dispatch]);
 
-  // Assuming 'shared' files have a specific flag or attribute
-  // If not, you can implement it accordingly
   const sharedFiles = files.filter(file => file.shared === true);
 
   if (loading) {
